@@ -1231,7 +1231,7 @@ cbtn1, cbtn2 = st.columns(2)
 with cbtn1:
     send_now_btn = st.button("Kirim Notifikasi Telegram", use_container_width=True)
 with cbtn2:
-    st.metric("Jumlah Alert Kuat", len(alert_df))
+    st.metric("Jumlah Alert Kuat", len(alert_df) if 'alert_df' in locals() and alert_df is not None else 0)
 
 # =========================================================
 # KIRIM MANUAL
